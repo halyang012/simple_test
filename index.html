@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MarkdownPad Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1><strong><font color=red>鬼灯的冷彻</font></strong></h1>
+<pre><code>   --鬼灯の冷徹 （“冷彻”指不被感情所左右能冷静客观透彻的看待事物。）
+</code></pre>
+
+<hr />
+<h2><strong><font color=green>剧情简介</font></strong></h2>
+<p>在故事里的那个世界存在着天国和地狱，地狱被分为八大地狱和八寒地狱两部分，其中更是划分了二百七十二个精细的部署，战后的人口爆发，恶灵（贞子一类的）的凶暴化， 那个世界陷入了前所示闻的混乱之中。不管是这个世界还是那个世界，处理此等问题的就是冷静的善后工作负责人，但是—如此杰出的幕后人物却比各种领袖角色稀少多了。阎罗王手下的第一补佐官・鬼灯就是处理善后的鬼神，作为抖S的鬼灯的地狱日常生活开始了……</p>
+<p><img src="https://raw.githubusercontent.com/halyang012/simple_test/master/timg.jpg" alt="剧照图" /></p>
+<h2><strong><font color=green>重点角色配音及其配音</font></strong></h2>
+<ul>
+<li><a href="https://baike.baidu.com/item/%E9%AC%BC%E7%81%AF/12814915">鬼灯</a>(<em><font color=grey>配音:安元洋贵</font></em>)</li>
+</ul>
+<p>漫画主角，头上有一支角，三白眼的阎魔大王的第一辅佐官，鬼神中是首领的地位。 爱好是自己品种改良了金鱼草的饲养，喜欢动物，不畏惧女性。现世出差的时候，用帽子遮着耳朵及角。金鱼草比赛中担任审查员。不擅长吃辣喜欢喝酒。死对头是神兽白泽。原是人类，小时候被当作为人祭的祭品，之后遗体被鬼火进入而变成鬼生存。“鬼灯”的由来是阎魔大王“鬼火丁”（古代中国的意义是仆人的意思）鬼灯而采用直到现在。阎罗王手下的第二代第一辅佐官的鬼神。是地狱怨念最深咒怨最强的第一鬼神祟神（作祟的神明)</p>
+<p><img src="https://raw.githubusercontent.com/halyang012/simple_test/master/timg1.jpg" alt="鬼灯" /></p>
+<ul>
+<li><a href="https://baike.baidu.com/item/%E7%99%BD%E6%B3%BD/13573388?fr=aladdin">白泽</a>(<em><font color=grey>配音:游佐浩二</font></em>)</li>
+</ul>
+<p>居住在天国桃源乡的中国上古神兽，智慧之神，通晓万物情理。白垩纪时便已经存在，为万妖（日本妖怪神鬼界限模糊，大意就是所有的神魔鬼怪）之首，职业是中药药剂师，研究药剂是为了“晚上和女孩子玩”。平时非常通情达理，智慧也很冷静，但是一碰到和女人有关的事就变得相当幼稚。曾经因为被几个女人以”鬼灯更稳重“等理由拒绝，因此对鬼灯有相当大的不满。和地狱的鬼灯是死对头，一见面互相不对盘，非常讨厌别人说他们两个长得像。二人恶劣的关系起始于千年前。</p>
+<p><img src="https://raw.githubusercontent.com/halyang012/simple_test/master/timg16SYRP47.jpg" alt="白泽" /></p>
+<h2>......</h2>
+<h3><strong><a href="http://bangumi.bilibili.com/anime/3440">bilibili番剧</a>正在轮播</strong></h3>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
